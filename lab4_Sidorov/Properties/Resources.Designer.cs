@@ -63,6 +63,16 @@ namespace lab4_Sidorov.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _703floppydisk_100861 {
+            get {
+                object obj = ResourceManager.GetObject("703floppydisk_100861", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap keypng {
             get {
                 object obj = ResourceManager.GetObject("keypng", resourceCulture);
@@ -76,6 +86,16 @@ namespace lab4_Sidorov.Properties {
         internal static System.Drawing.Bitmap keypng1 {
             get {
                 object obj = ResourceManager.GetObject("keypng1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_icon_icons_com_73704 {
+            get {
+                object obj = ResourceManager.GetObject("Open_icon-icons.com_73704", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

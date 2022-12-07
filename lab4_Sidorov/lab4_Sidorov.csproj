@@ -85,9 +85,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\703floppydisk_100861.png" />
+    <None Include="Resources\703floppydisk_1008611.png" />
     <Content Include="Resources\keypng.png" />
     <None Include="Resources\keypng2.png" />
     <None Include="Resources\keypng1.png" />
+    <Content Include="Resources\Open_icon-icons.com_73704.png" />
+    <None Include="Resources\Open_icon-icons.com_737041.png" />
     <Content Include="Res\keypng.ico" />
     <Content Include="Res\keypng.png" />
   </ItemGroup>

@@ -38,14 +38,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Key = new System.Windows.Forms.GroupBox();
-            this.button_KEYgenerator = new System.Windows.Forms.Button();
-            this.button_fileKEYopen = new System.Windows.Forms.Button();
             this.textBox_fileKEY = new System.Windows.Forms.TextBox();
             this.button_fileKEYsave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button_start = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label_time = new System.Windows.Forms.Label();
+            this.button_KEYgenerator = new System.Windows.Forms.Button();
+            this.button_fileKEYopen = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.Key.SuspendLayout();
             this.SuspendLayout();
@@ -124,32 +124,12 @@
             this.Key.Controls.Add(this.textBox_fileKEY);
             this.Key.Controls.Add(this.button_fileKEYsave);
             this.Key.Controls.Add(this.label3);
-            this.Key.Location = new System.Drawing.Point(13, 152);
+            this.Key.Location = new System.Drawing.Point(12, 152);
             this.Key.Name = "Key";
-            this.Key.Size = new System.Drawing.Size(524, 101);
+            this.Key.Size = new System.Drawing.Size(525, 145);
             this.Key.TabIndex = 1;
             this.Key.TabStop = false;
             this.Key.Text = "Key";
-            // 
-            // button_KEYgenerator
-            // 
-            this.button_KEYgenerator.Image = global::lab4_Sidorov.Properties.Resources.keypng1;
-            this.button_KEYgenerator.Location = new System.Drawing.Point(211, 61);
-            this.button_KEYgenerator.Name = "button_KEYgenerator";
-            this.button_KEYgenerator.Size = new System.Drawing.Size(108, 40);
-            this.button_KEYgenerator.TabIndex = 4;
-            this.button_KEYgenerator.UseVisualStyleBackColor = true;
-            this.button_KEYgenerator.Click += new System.EventHandler(this.button_KEYgenerator_Click);
-            // 
-            // button_fileKEYopen
-            // 
-            this.button_fileKEYopen.Location = new System.Drawing.Point(427, 21);
-            this.button_fileKEYopen.Name = "button_fileKEYopen";
-            this.button_fileKEYopen.Size = new System.Drawing.Size(81, 23);
-            this.button_fileKEYopen.TabIndex = 3;
-            this.button_fileKEYopen.Text = "Open";
-            this.button_fileKEYopen.UseVisualStyleBackColor = true;
-            this.button_fileKEYopen.Click += new System.EventHandler(this.button_fileKEYopen_Click);
             // 
             // textBox_fileKEY
             // 
@@ -160,11 +140,11 @@
             // 
             // button_fileKEYsave
             // 
-            this.button_fileKEYsave.Location = new System.Drawing.Point(427, 50);
+            this.button_fileKEYsave.Image = global::lab4_Sidorov.Properties.Resources._703floppydisk_100861;
+            this.button_fileKEYsave.Location = new System.Drawing.Point(427, 77);
             this.button_fileKEYsave.Name = "button_fileKEYsave";
-            this.button_fileKEYsave.Size = new System.Drawing.Size(81, 24);
+            this.button_fileKEYsave.Size = new System.Drawing.Size(81, 52);
             this.button_fileKEYsave.TabIndex = 1;
-            this.button_fileKEYsave.Text = "Save";
             this.button_fileKEYsave.UseVisualStyleBackColor = true;
             this.button_fileKEYsave.Click += new System.EventHandler(this.button_fileKEYsave_Click);
             // 
@@ -179,7 +159,7 @@
             // 
             // button_start
             // 
-            this.button_start.Location = new System.Drawing.Point(440, 259);
+            this.button_start.Location = new System.Drawing.Point(439, 299);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(81, 38);
             this.button_start.TabIndex = 2;
@@ -190,7 +170,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 274);
+            this.label4.Location = new System.Drawing.Point(22, 299);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 16);
             this.label4.TabIndex = 3;
@@ -199,17 +179,37 @@
             // label_time
             // 
             this.label_time.AutoSize = true;
-            this.label_time.Location = new System.Drawing.Point(309, 274);
+            this.label_time.Location = new System.Drawing.Point(310, 299);
             this.label_time.Name = "label_time";
             this.label_time.Size = new System.Drawing.Size(38, 16);
             this.label_time.TabIndex = 4;
             this.label_time.Text = "Time";
             // 
+            // button_KEYgenerator
+            // 
+            this.button_KEYgenerator.Image = global::lab4_Sidorov.Properties.Resources.keypng1;
+            this.button_KEYgenerator.Location = new System.Drawing.Point(211, 61);
+            this.button_KEYgenerator.Name = "button_KEYgenerator";
+            this.button_KEYgenerator.Size = new System.Drawing.Size(108, 40);
+            this.button_KEYgenerator.TabIndex = 4;
+            this.button_KEYgenerator.UseVisualStyleBackColor = true;
+            this.button_KEYgenerator.Click += new System.EventHandler(this.button_KEYgenerator_Click);
+            // 
+            // button_fileKEYopen
+            // 
+            this.button_fileKEYopen.Image = global::lab4_Sidorov.Properties.Resources.Open_icon_icons_com_73704;
+            this.button_fileKEYopen.Location = new System.Drawing.Point(427, 21);
+            this.button_fileKEYopen.Name = "button_fileKEYopen";
+            this.button_fileKEYopen.Size = new System.Drawing.Size(81, 50);
+            this.button_fileKEYopen.TabIndex = 3;
+            this.button_fileKEYopen.UseVisualStyleBackColor = true;
+            this.button_fileKEYopen.Click += new System.EventHandler(this.button_fileKEYopen_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 303);
+            this.ClientSize = new System.Drawing.Size(572, 374);
             this.Controls.Add(this.label_time);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button_start);

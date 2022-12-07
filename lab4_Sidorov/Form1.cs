@@ -21,6 +21,8 @@ namespace lab4_Sidorov
         public Form1()
         {
             InitializeComponent();
+            toolTip1.SetToolTip(button_fileKEYsave, "Зберегти");
+            toolTip1.SetToolTip(button_fileKEYopen, "Відкрити");
         }
 
         
@@ -140,24 +142,16 @@ namespace lab4_Sidorov
                         long lengthINfile = new FileInfo(fileINpath).Length;
                         //Довжина вхідного файлу у байтах
                         long lengthKEYfile = new FileInfo(fileKEYpath).Length;
-                        if (lengthINfile == lengthKEYfile)
-                        {
-                            Stopwatch stopwatch = new Stopwatch();
-                            // Begin timing.
-                            stopwatch.Start();
-                            byte[] arrCipher = myCipherXOR(fileINpath, fileKEYpath);
-                            //шифрування
-                            mySaveToFileOUT(arrCipher, fileOUTpath); //збереження у файл
-                                                                     // Stop timing.
-                            stopwatch.Stop();
-                            // Write result.
-                            label_time.Text = stopwatch.Elapsed.ToString(Format);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Розмір файлу ключа не співпадає\nз розміром вхідного файлу");
-                            button_fileKEYopen.Focus();
-                        }
+                        Stopwatch stopwatch = new Stopwatch();
+                        // Begin timing.
+                        stopwatch.Start();
+                        byte[] arrCipher = myCipherXOR(fileINpath, fileKEYpath);
+                        //шифрування
+                        mySaveToFileOUT(arrCipher, fileOUTpath); //збереження у файл
+                                                                 // Stop timing.
+                        stopwatch.Stop();
+                        // Write result.
+                        label_time.Text = stopwatch.Elapsed.ToString(Format);
                     }
                     else
                     {
@@ -184,11 +178,13 @@ namespace lab4_Sidorov
             byte[] arrIN = File.ReadAllBytes(fileINpath);
             byte[] arrKEY = File.ReadAllBytes(fileKEYpath);
             int lenIN = arrIN.Length;
+            
             byte[] arrCipher = new byte[lenIN];
             for (int i = 0;i < lenIN; i++)
-{
+            {
                 //Шифрування XOR
-                arrCipher[i] = (byte)(arrIN[i] ^ arrKEY[i]);
+                int new_i = arrIN.Length - ((arrIN.Length / arrKEY.Length) * arrKEY.Length);
+                arrCipher[i] = (byte)(arrIN[i] ^ arrKEY[new_i]);
             }
             return arrCipher;
         }
