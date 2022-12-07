@@ -85,6 +85,18 @@ namespace lab4_Sidorov
                 textBox_fileKEY.Text = fileKEYPath;
             }
         }
+        static String BytesToString(long byteCount)
+        {
+            string[] suf = { "Byt", "KB", "MB", "GB", "TB", "PB", "EB" }; //
+            if (byteCount == 0)
+                return "0" + suf[0];
+            long bytes = Math.Abs(byteCount);
+            int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
+            double num = Math.Round(bytes / Math.Pow(1024, place), 1);
+            return (Math.Sign(byteCount) * num).ToString() + suf[place];
+
+
+        }
         private void button_KEYgenerator_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Стоворити новий ключ ?"," Увага ",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -109,6 +121,10 @@ namespace lab4_Sidorov
                         {
                             fs.Write(arrKEY, 0, arrKEY.Length);
                             fs.Close();
+
+                            long byteCount = new System.IO.FileInfo(fileKEYpath).Length;
+                            string bytesize = BytesToString(byteCount);
+                            labelsize.Text = "Розмір ключа:" + '\n' + bytesize;
                         }
                     }
                     else

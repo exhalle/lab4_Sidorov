@@ -38,14 +38,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Key = new System.Windows.Forms.GroupBox();
+            this.button_KEYgenerator = new System.Windows.Forms.Button();
+            this.button_fileKEYopen = new System.Windows.Forms.Button();
             this.textBox_fileKEY = new System.Windows.Forms.TextBox();
             this.button_fileKEYsave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button_start = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label_time = new System.Windows.Forms.Label();
-            this.button_KEYgenerator = new System.Windows.Forms.Button();
-            this.button_fileKEYopen = new System.Windows.Forms.Button();
+            this.labelsize = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Key.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +132,26 @@
             this.Key.TabStop = false;
             this.Key.Text = "Key";
             // 
+            // button_KEYgenerator
+            // 
+            this.button_KEYgenerator.Image = global::lab4_Sidorov.Properties.Resources.keypng1;
+            this.button_KEYgenerator.Location = new System.Drawing.Point(211, 61);
+            this.button_KEYgenerator.Name = "button_KEYgenerator";
+            this.button_KEYgenerator.Size = new System.Drawing.Size(108, 40);
+            this.button_KEYgenerator.TabIndex = 4;
+            this.button_KEYgenerator.UseVisualStyleBackColor = true;
+            this.button_KEYgenerator.Click += new System.EventHandler(this.button_KEYgenerator_Click);
+            // 
+            // button_fileKEYopen
+            // 
+            this.button_fileKEYopen.Image = global::lab4_Sidorov.Properties.Resources.Open_icon_icons_com_73704;
+            this.button_fileKEYopen.Location = new System.Drawing.Point(427, 21);
+            this.button_fileKEYopen.Name = "button_fileKEYopen";
+            this.button_fileKEYopen.Size = new System.Drawing.Size(81, 50);
+            this.button_fileKEYopen.TabIndex = 3;
+            this.button_fileKEYopen.UseVisualStyleBackColor = true;
+            this.button_fileKEYopen.Click += new System.EventHandler(this.button_fileKEYopen_Click);
+            // 
             // textBox_fileKEY
             // 
             this.textBox_fileKEY.Location = new System.Drawing.Point(120, 33);
@@ -185,31 +206,21 @@
             this.label_time.TabIndex = 4;
             this.label_time.Text = "Time";
             // 
-            // button_KEYgenerator
+            // labelsize
             // 
-            this.button_KEYgenerator.Image = global::lab4_Sidorov.Properties.Resources.keypng1;
-            this.button_KEYgenerator.Location = new System.Drawing.Point(211, 61);
-            this.button_KEYgenerator.Name = "button_KEYgenerator";
-            this.button_KEYgenerator.Size = new System.Drawing.Size(108, 40);
-            this.button_KEYgenerator.TabIndex = 4;
-            this.button_KEYgenerator.UseVisualStyleBackColor = true;
-            this.button_KEYgenerator.Click += new System.EventHandler(this.button_KEYgenerator_Click);
-            // 
-            // button_fileKEYopen
-            // 
-            this.button_fileKEYopen.Image = global::lab4_Sidorov.Properties.Resources.Open_icon_icons_com_73704;
-            this.button_fileKEYopen.Location = new System.Drawing.Point(427, 21);
-            this.button_fileKEYopen.Name = "button_fileKEYopen";
-            this.button_fileKEYopen.Size = new System.Drawing.Size(81, 50);
-            this.button_fileKEYopen.TabIndex = 3;
-            this.button_fileKEYopen.UseVisualStyleBackColor = true;
-            this.button_fileKEYopen.Click += new System.EventHandler(this.button_fileKEYopen_Click);
+            this.labelsize.AutoSize = true;
+            this.labelsize.Location = new System.Drawing.Point(25, 332);
+            this.labelsize.Name = "labelsize";
+            this.labelsize.Size = new System.Drawing.Size(67, 16);
+            this.labelsize.TabIndex = 5;
+            this.labelsize.Text = "Size of file";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 374);
+            this.Controls.Add(this.labelsize);
             this.Controls.Add(this.label_time);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button_start);
@@ -245,6 +256,7 @@
         private System.Windows.Forms.Button button_start;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label_time;
+        private System.Windows.Forms.Label labelsize;
     }
 }
 
